@@ -1,7 +1,9 @@
-import { ChapterDetails } from "./ChapterDetails"
+import { ChapterDetails } from "./ChapterDetails";
 
-const _global = global as any
+const _global = global as any;
 
-_global.createChapterDetails = function (chapterDetails: ChapterDetails): ChapterDetails {
-    return chapterDetails
-}
+_global.createChapterDetails = function (
+    chapterDetails: ChapterDetails
+): ChapterDetails {
+    return chapterDetails;
+};

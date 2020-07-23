@@ -6,34 +6,34 @@
  * as fine searching is an important user feature.
  */
 export interface SearchRequest {
-  /**
-   * The title of the search request. This usually is the plaintext query you are
-   * making as a user
-   */
-  title?: string
+    /**
+     * The title of the search request. This usually is the plaintext query you are
+     * making as a user
+     */
+    title?: string;
 
-  includeDemographic?: string[]
+    includeDemographic?: string[];
 
-  includeTheme?: string[]
-  includeFormat?: string[]
-  includeContent?: string[]
-  includeGenre?: string[]
+    includeTheme?: string[];
+    includeFormat?: string[];
+    includeContent?: string[];
+    includeGenre?: string[];
 
-  excludeDemographic?: string[]
-  excludeTheme?: string[]
-  excludeFormat?: string[]
-  excludeContent?: string[]
-  excludeGenre?: string[]
+    excludeDemographic?: string[];
+    excludeTheme?: string[];
+    excludeFormat?: string[];
+    excludeContent?: string[];
+    excludeGenre?: string[];
 
-  includeOperator?: number
-  excludeOperator?: number
+    includeOperator?: number;
+    excludeOperator?: number;
 
-  author?: string
-  artist?: string
-  status?: number
-  hStatus?: boolean
+    author?: string;
+    artist?: string;
+    status?: number;
+    hStatus?: boolean;
 }
 
 declare global {
-  function createSearchRequest(searchRequest: SearchRequest): SearchRequest
+    function createSearchRequest(searchRequest: SearchRequest): SearchRequest;
 }

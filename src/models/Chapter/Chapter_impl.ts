@@ -1,7 +1,7 @@
-import { Chapter } from "./Chapter"
+import { Chapter } from "./Chapter";
 
-const _global = global as any
+const _global = global as any;
 
 _global.createChapter = function (chapter: Chapter): Chapter {
-    return chapter
-}
+    return chapter;
+};

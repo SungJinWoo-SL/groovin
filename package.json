@@ -1,40 +1,40 @@
 {
-  "name": "mangadex-work",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "tsc && node dist/api.js",
-    "build": "tsc",
-    "test": "node_modules/.bin/mocha --timeout 300000 -r ts-node/register src/**/*.test.ts",
-    "coverage": "nyc -r lcov -e .ts -x \"*.test.ts\" npm run test",
-    "app_test": "gulp bundle && python -m http.server --directory ./bundles/ 6969"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "axios": "^0.19.2",
-    "browserify": "^16.5.1",
-    "cheerio": "^1.0.0-rc.3",
-    "gulp": "^4.0.2",
-    "gulp-rename": "^2.0.0",
-    "gulp-streamify": "^1.0.2",
-    "gulp-uglify": "^3.0.2",
-    "tsify": "^4.0.1",
-    "typescript": "^3.8.3",
-    "vinyl-source-stream": "^2.0.0"
-  },
-  "devDependencies": {
-    "@types/chai": "^4.2.11",
-    "@types/chai-as-promised": "^7.1.2",
-    "@types/cheerio": "^0.22.18",
-    "@types/mocha": "^7.0.2",
-    "chai": "^4.2.0",
-    "chai-as-promised": "^7.1.1",
-    "gulp": "^4.0.2",
-    "mocha": "^7.0.2",
-    "nyc": "^15.0.1",
-    "ts-node": "^8.10.1",
-    "typedoc": "^0.17.6"
-  }
+    "name": "mangadex-work",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "tsc && node dist/api.js",
+        "build": "tsc",
+        "test": "node_modules/.bin/mocha --timeout 300000 -r ts-node/register src/**/*.test.ts",
+        "coverage": "nyc -r lcov -e .ts -x \"*.test.ts\" npm run test",
+        "app_test": "gulp bundle && python -m http.server --directory ./bundles/ 6969"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^0.19.2",
+        "browserify": "^16.5.1",
+        "cheerio": "^1.0.0-rc.3",
+        "gulp": "^4.0.2",
+        "gulp-rename": "^2.0.0",
+        "gulp-streamify": "^1.0.2",
+        "gulp-uglify": "^3.0.2",
+        "tsify": "^4.0.1",
+        "typescript": "^3.8.3",
+        "vinyl-source-stream": "^2.0.0"
+    },
+    "devDependencies": {
+        "@types/chai": "^4.2.11",
+        "@types/chai-as-promised": "^7.1.2",
+        "@types/cheerio": "^0.22.18",
+        "@types/mocha": "^7.0.2",
+        "chai": "^4.2.0",
+        "chai-as-promised": "^7.1.1",
+        "gulp": "^4.0.2",
+        "mocha": "^7.0.2",
+        "nyc": "^15.0.1",
+        "ts-node": "^8.10.1",
+        "typedoc": "^0.17.6"
+    }
 }

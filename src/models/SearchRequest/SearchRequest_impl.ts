@@ -1,7 +1,9 @@
-import { SearchRequest } from "./SearchRequest"
+import { SearchRequest } from "./SearchRequest";
 
-const _global = global as any
+const _global = global as any;
 
-_global.createSearchRequest = function (searchRequest: SearchRequest): SearchRequest {
-    return searchRequest
-}
+_global.createSearchRequest = function (
+    searchRequest: SearchRequest
+): SearchRequest {
+    return searchRequest;
+};

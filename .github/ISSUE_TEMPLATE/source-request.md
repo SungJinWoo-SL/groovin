@@ -2,9 +2,8 @@
 name: Source request
 about: Suggest a source to be added.
 title: "[SOURCE]"
-labels: ''
-assignees: ''
-
+labels: ""
+assignees: ""
 ---
 
 **Why should this source be added?**

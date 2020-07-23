@@ -1,11 +1,13 @@
-import { HomeSection, HomeSectionRequest } from "./HomeSection"
+import { HomeSection, HomeSectionRequest } from "./HomeSection";
 
-const _global = global as any
+const _global = global as any;
 
 _global.createHomeSection = function (section: HomeSection): HomeSection {
-    return section
-}
+    return section;
+};
 
-_global.createHomeSectionRequest = function (homeRequestObject: HomeSectionRequest): HomeSectionRequest {
-    return homeRequestObject
-}
+_global.createHomeSectionRequest = function (
+    homeRequestObject: HomeSectionRequest
+): HomeSectionRequest {
+    return homeRequestObject;
+};
