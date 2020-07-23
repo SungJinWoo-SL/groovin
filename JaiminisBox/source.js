@@ -148,7 +148,8 @@ class JaiminisBox extends Source_1.Source {
                 .includes("volume");
             let title = $("div.title a", element).attr("title");
             let date = new Date(Date.parse((_a = $("div.meta_r", element).html()) !== null && _a !== void 0 ? _a : ""));
-            let chapterIdRaw = (_b = $("div.title a", element).attr("href")) === null || _b === void 0 ? void 0 : _b.split("/");
+            let chapterIdRaw = (_b = $("div.title a", element)
+                .attr("href")) === null || _b === void 0 ? void 0 : _b.split("/");
             let chapterIdClean = chapterIdRaw === null || chapterIdRaw === void 0 ? void 0 : chapterIdRaw.filter((i) => {
                 return i != "" && i != null;
             });
@@ -158,7 +159,10 @@ class JaiminisBox extends Source_1.Source {
             }
             let chapterNumber = (_c = parseInt(chapterId)) !== null && _c !== void 0 ? _c : 0;
             let volume = hasVolumes
-                ? parseInt($("div.title", element.parent).text().match(/\d+/g)[0].toString())
+                ? parseInt($("div.title", element.parent)
+                    .text()
+                    .match(/\d+/g)[0]
+                    .toString())
                 : (_d = parseInt(chapterId)) !== null && _d !== void 0 ? _d : 0;
             chapters.push(createChapter({
                 id: chapterId,
@@ -224,8 +228,8 @@ class JaiminisBox extends Source_1.Source {
             }
             let title = $("div.title a", manga).attr("title");
             /* let lastUpdate = new Date(
-              Date.parse($("div.meta_r", manga).html() ?? "")
-            ).toLocaleDateString(); */
+        Date.parse($("div.meta_r", manga).html() ?? "")
+      ).toLocaleDateString(); */
             mangas.push(createMangaTile({
                 id: chapterId,
                 image: "https://via.placeholder.com/300x448.png",

@@ -144,7 +144,9 @@ class ReadComicsOnline extends Source_1.Source {
         let rawChapters = $("ul.chapters li").toArray();
         for (let element of rawChapters) {
             let title = $("h5.chapter-title-rtl a", element).text().trim();
-            let date = new Date(Date.parse($("div.action div.date-chapter-title-rtl", element).text().trim()));
+            let date = new Date(Date.parse($("div.action div.date-chapter-title-rtl", element)
+                .text()
+                .trim()));
             let chapterId = (_b = (_a = $("h5.chapter-title-rtl a", element)
                 .attr("href")) === null || _a === void 0 ? void 0 : _a.split("/").pop()) === null || _b === void 0 ? void 0 : _b.toString();
             let chapterNumber = parseInt(chapterId) == NaN ? 0 : parseInt(chapterId);

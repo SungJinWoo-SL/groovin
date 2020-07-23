@@ -110,7 +110,10 @@ class Mangakisa extends Source_1.Source {
         })
             .attr("href")) === null || _a === void 0 ? void 0 : _a.split("/").pop();
         let isAdult = false;
-        let description = $("div.infodesbox div.infodes2").first().text().trim();
+        let description = $("div.infodesbox div.infodes2")
+            .first()
+            .text()
+            .trim();
         let status = Manga_1.MangaStatus.ONGOING;
         let titles = [];
         titles.push(title);
@@ -206,7 +209,8 @@ class Mangakisa extends Source_1.Source {
             let title = $("div.similarc div.similard div.centered div.similardd", manga)
                 .text()
                 .trim();
-            let image = MK_DOMAIN + $("div.similarc div.similarpic img", manga).attr("src");
+            let image = MK_DOMAIN +
+                $("div.similarc div.similarpic img", manga).attr("src");
             mangas.push(createMangaTile({
                 image,
                 id,
