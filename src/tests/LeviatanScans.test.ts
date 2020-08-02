@@ -12,7 +12,7 @@ describe("LeviatanScans Tests", function () {
   var chaiAsPromised = require("chai-as-promised");
   chai.use(chaiAsPromised);
 
-  var mangaId = "690563-im-destined-for-greatness";
+  var mangaId = "217553-6-worlds-of-cultivation";
 
   it("Retrieve Manga Details", async () => {
     let details = await wrapper.getMangaDetails(source, [mangaId]);
@@ -36,6 +36,8 @@ describe("LeviatanScans Tests", function () {
 
   it("Get Chapters", async () => {
     let data = await wrapper.getChapters(source, mangaId);
+
+    console.log(data);
 
     expect(data, "No chapters present for: [" + mangaId + "]").to.not.be.empty;
   });

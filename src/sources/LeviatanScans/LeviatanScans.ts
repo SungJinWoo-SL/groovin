@@ -6,6 +6,7 @@ import { SearchRequest } from "../../models/SearchRequest/SearchRequest";
 import { Request } from "../../models/RequestObject/RequestObject";
 import { ChapterDetails } from "../../models/ChapterDetails/ChapterDetails";
 import { LanguageCode } from "../../models/Languages/Languages";
+import moment, { unitOfTime } from "moment";
 
 const LV_DOMAIN = "https://leviatanscans.com";
 
@@ -15,7 +16,7 @@ export class LeviatanScans extends Source {
   }
 
   get version(): string {
-    return "1.0.1";
+    return "1.1.0";
   }
 
   get name(): string {
@@ -136,12 +137,24 @@ export class LeviatanScans extends Source {
       let chapterId = chapterNumbers![1];
       let chapterNumber = parseInt(chapterNumbers![1]);
       let volume = parseInt(chapterNumbers![0]);
+      let rawDate = $("a.item-company", element).text().trim();
+
+      const parseRelativeDate = (str: string): Date => {
+        let trimmedDate: string[] = str
+          .substr(0, str.indexOf(" ago"))
+          .split(" ");
+
+        // @ts-ignore: moment is being stupid
+        return moment().subtract(trimmedDate[0], trimmedDate[1]).toDate();
+      };
+
+      let releaseDate = parseRelativeDate(rawDate);
 
       chapters.push(
         createChapter({
           id: chapterId,
           mangaId: metadata.mangaId,
-          time: undefined,
+          time: releaseDate,
           name: title,
           langCode: LanguageCode.ENGLISH,
           chapNum: chapterNumber,

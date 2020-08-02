@@ -20,6 +20,7 @@
         "gulp-rename": "^2.0.0",
         "gulp-streamify": "^1.0.2",
         "gulp-uglify": "^3.0.2",
+        "moment": "^2.27.0",
         "tsify": "^4.0.1",
         "typescript": "^3.8.3",
         "vinyl-source-stream": "^2.0.0"
