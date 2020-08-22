@@ -5740,7 +5740,7 @@ class ReaperScans extends Source_1.Source {
         super(cheerio);
     }
     get version() {
-        return "1.0.0";
+        return "1.0.1";
     }
     get name() {
         return "Reaper Scans";
