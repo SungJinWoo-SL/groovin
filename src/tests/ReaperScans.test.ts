@@ -1,18 +1,18 @@
 import { Source } from "../sources/Source";
 import cheerio from "cheerio";
 import { APIWrapper } from "../API";
-import { LeviatanScans } from "../sources/LeviatanScans/LeviatanScans";
+import { ReaperScans } from "../sources/ReaperScans/ReaperScans";
 
-describe("LeviatanScans Tests", function () {
+describe("ReaperScans Tests", function () {
   var wrapper: APIWrapper = new APIWrapper();
-  var source: Source = new LeviatanScans(cheerio);
+  var source: Source = new ReaperScans(cheerio);
   var chai = require("chai"),
     expect = chai.expect,
     should = chai.should();
   var chaiAsPromised = require("chai-as-promised");
   chai.use(chaiAsPromised);
 
-  var mangaId = "217553-6-worlds-of-cultivation";
+  var mangaId = "407643-overgeared";
 
   it("Retrieve Manga Details", async () => {
     let details = await wrapper.getMangaDetails(source, [mangaId]);
@@ -55,7 +55,7 @@ describe("LeviatanScans Tests", function () {
 
   it("Testing search", async () => {
     let testSearch = createSearchRequest({
-      title: "I'm Destined",
+      title: "Overgeared",
     });
 
     let search = await wrapper.search(source, testSearch, 0);
