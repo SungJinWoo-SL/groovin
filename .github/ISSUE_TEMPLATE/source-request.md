@@ -17,3 +17,6 @@ What is the URL of the site?
 
 **Additional context**
 Add any other context or screenshots about the source request here.
+
+**What is your discord name with tag.**
+ eg. Meliodas#0001
