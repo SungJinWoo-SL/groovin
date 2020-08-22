@@ -16,7 +16,7 @@ export class ReaperScans extends Source {
   }
 
   get version(): string {
-    return "1.0.0";
+    return "1.0.1";
   }
 
   get name(): string {
